@@ -2,7 +2,7 @@ const fs = require('fs')
 current = process.cwd()
 
 let prefix = process.argv[3]
-let renamePrefix = process.argv[2]
+let renamePrefix = process.argv[2] ?? 'file'
 
 fs.readdirSync(current).forEach((itm, i) => {
     const splitting = itm.split('.')
